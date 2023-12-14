@@ -1,0 +1,6 @@
+.spanicon{
+    display: none;
+}
+a:hover .spanicon{
+    display: inline;
+}

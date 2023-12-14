@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dov'è l'ISS?</title>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <!-- <script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyA5xZElwEGyZ3kyJpPrslZuA4BQiie921"></script> -->
+      <script src="../scripts/scriptIss.js" defer></script>
+      <link rel="stylesheet" href="../styles/styleIss.css">
+      <link rel="icon" href="../images/logo.png" type="image/x-icon">
+   </head>
+   <body>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+         <div id="toast1" data-bs-autohide="true" data-bs-delay="10000" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+               <div class="toast-body text-white">
+                  <strong>Qualcosa è andato storto!</strong> prova a ricaricare o <a href="../it-IT/about.html" class="link-body-emphasis">segnala il problema</a>
+               </div>
+               <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+         </div>
+      </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-black navbar-dark sticky-top">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="../it-IT/index.html">
+            <img src="../images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="../it-IT/index.html">Pagina Principale</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../it-IT/apod.html">APOD</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="../it-IT/iss.html">ISS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../it-IT/asteroidi.html">Asteroidi</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../it-IT/about.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Lingua </a>
+                     <ul class="dropdown-menu bg-black">
+                        <li>
+                           <a class="dropdown-item nav-link" href="../en-US/iss.html">
+                              ENG 
+                              <svg height="20" width="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                 viewBox="0 0 512 512" xml:space="preserve">
+                                 <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38
+                                    c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621
+                                    C512,105.443,494.833,88.276,473.655,88.276z"/>
+                                 <path style="fill:#F5F5F5;" d="M511.469,120.282c-3.022-18.159-18.797-32.007-37.814-32.007h-9.977l-163.54,107.147V88.276h-88.276
+                                    v107.147L48.322,88.276h-9.977c-19.017,0-34.792,13.847-37.814,32.007l139.778,91.58H0v88.276h140.309L0.531,391.717
+                                    c3.022,18.159,18.797,32.007,37.814,32.007h9.977l163.54-107.147v107.147h88.276V316.577l163.54,107.147h9.977
+                                    c19.017,0,34.792-13.847,37.814-32.007l-139.778-91.58H512v-88.276H371.691L511.469,120.282z"/>
+                                 <g>
+                                    <polygon style="fill:#FF4B55;" points="282.483,88.276 229.517,88.276 229.517,229.517 0,229.517 0,282.483 229.517,282.483 
+                                       229.517,423.724 282.483,423.724 282.483,282.483 512,282.483 512,229.517 282.483,229.517 	"/>
+                                    <path style="fill:#FF4B55;" d="M24.793,421.252l186.583-121.114h-32.428L9.224,410.31
+                                       C13.377,415.157,18.714,418.955,24.793,421.252z"/>
+                                    <path style="fill:#FF4B55;" d="M346.388,300.138H313.96l180.716,117.305c5.057-3.321,9.277-7.807,12.287-13.075L346.388,300.138z"
+                                       />
+                                    <path style="fill:#FF4B55;" d="M4.049,109.475l157.73,102.387h32.428L15.475,95.842C10.676,99.414,6.749,104.084,4.049,109.475z"/>
+                                    <path style="fill:#FF4B55;" d="M332.566,211.862l170.035-110.375c-4.199-4.831-9.578-8.607-15.699-10.86L300.138,211.862H332.566z"
+                                       />
+                                 </g>
+                              </svg>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item nav-link active bg-dark" href="../it-IT/iss.html">
+                              ITA 
+                              <svg width="20" height="20" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                                 <path fill="#CE2B37" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z"></path>
+                                 <path fill="#009246" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z"></path>
+                                 <path fill="#EEE" d="M12 5h12v26H12z"></path>
+                              </svg>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="container-fluid p-3 bg-dark text-white text-center" id="header">
+         <h1 class="home-title"><b><span>POSIZONE CORRENTE DELLA</span><span>ISS</span></b></h1>
+         <div class="container-fluid p-2">
+            <div class="row">
+               <div class="col-md-6">
+                  <h4 class="text-start">Informazioni:</h4>
+                  <ul class="list-group list-group-horizontal mt-3" data-bs-theme="dark">
+                     <li class="list-group-item">
+                        <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                           <g id="SVGRepo_iconCarrier">
+                              <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+                              <path d="M30.2972 18.7786C30.2972 18.7786 27.0679 27.8808 25.5334 29.4699C23.9988 31.0591 21.4665 31.1033 19.8774 29.5687C18.2882 28.0341 18.244 25.5018 19.7786 23.9127C21.3132 22.3236 30.2972 18.7786 30.2972 18.7786Z" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+                              <path d="M38.8492 38.8492C42.6495 35.049 45 29.799 45 24C45 12.402 35.598 3 24 3C12.402 3 3 12.402 3 24C3 29.799 5.35051 35.049 9.15076 38.8492" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M24 4V8" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M38.8454 11.1421L35.7368 13.6593" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M42.5225 27.2328L38.6251 26.333" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M5.47749 27.2328L9.37497 26.333" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9.15463 11.1421L12.2632 13.6593" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                           </g>
+                        </svg>
+                        <b>Velocità:</b>
+                     </li>
+                     <li class="list-group-item" id="speedtext">data no available</li>
+                  </ul>
+                  <ul class="list-group list-group-horizontal mt-1" data-bs-theme="dark">
+                     <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                        <b>Quota:</b>
+                     </li>
+                     <li class="list-group-item" id="alttext">data no available</li>
+                  </ul>
+                  <ul class="list-group list-group-horizontal mt-1" data-bs-theme="dark" >
+                     <li class="list-group-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                           <g id="SVGRepo_iconCarrier">
+                              <path d="M22 9.00002V15C22 17.5 21.5 19.25 20.38 20.38L14 14L21.73 6.27002C21.91 7.06002 22 7.96002 22 9.00002Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M21.73 6.27L6.26999 21.73C3.25999 21.04 2 18.96 2 15V9C2 4 4 2 9 2H15C18.96 2 21.04 3.26 21.73 6.27Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20.38 20.38C19.25 21.5 17.5 22 15 22H9.00003C7.96003 22 7.06002 21.91 6.27002 21.73L14 14L20.38 20.38Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M6.24002 7.97997C6.92002 5.04997 11.32 5.04997 12 7.97997C12.39 9.69997 11.31 11.16 10.36 12.06C9.67001 12.72 8.58003 12.72 7.88003 12.06C6.93003 11.16 5.84002 9.69997 6.24002 7.97997Z" stroke="#ffffff" stroke-width="1.5"/>
+                              <path d="M9.0946 8.69995H9.10359" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           </g>
+                        </svg>
+                        <b>Latitudine:</b>
+                     </li>
+                     <li class="list-group-item" id="lattext">data no available</li>
+                  </ul>
+                  <ul class="list-group list-group-horizontal mt-1" data-bs-theme="dark" >
+                     <li class="list-group-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                           <g id="SVGRepo_iconCarrier">
+                              <path d="M22 9.00002V15C22 17.5 21.5 19.25 20.38 20.38L14 14L21.73 6.27002C21.91 7.06002 22 7.96002 22 9.00002Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M21.73 6.27L6.26999 21.73C3.25999 21.04 2 18.96 2 15V9C2 4 4 2 9 2H15C18.96 2 21.04 3.26 21.73 6.27Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20.38 20.38C19.25 21.5 17.5 22 15 22H9.00003C7.96003 22 7.06002 21.91 6.27002 21.73L14 14L20.38 20.38Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M6.24002 7.97997C6.92002 5.04997 11.32 5.04997 12 7.97997C12.39 9.69997 11.31 11.16 10.36 12.06C9.67001 12.72 8.58003 12.72 7.88003 12.06C6.93003 11.16 5.84002 9.69997 6.24002 7.97997Z" stroke="#ffffff" stroke-width="1.5"/>
+                              <path d="M9.0946 8.69995H9.10359" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           </g>
+                        </svg>
+                        <b>Longitudine:</b>
+                     </li>
+                     <li class="list-group-item" id="longtext">data no available</li>
+                  </ul>
+                  <div class="container-fluid pt-5">
+                     <p class="d-inline" id="updatetext">Ultimo aggiornamento 0 secondi fa</p>
+                     <button type="button" class="btn btn-outline-secondary btn-sm d-inline" id="updatebutton">Aggiorna</button>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <h4>Potrebbe anche interessarti:</h4>
+                  <div class="responsive-iframe">
+                     <iframe src="https://www.youtube.com/embed/P9C25Un7xaM" title="Live High-Definition Views from the International Space Station (Official NASA Stream)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="map" style="height: 400px; width: 100%;"></div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5xZElwEGyZ3kyJpPrslZuA4BQiie921M&callback=initMap" async defer></script>
+   </body>
+</html>

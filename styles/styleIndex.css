@@ -1,0 +1,30 @@
+.c-item {
+  height: 100vh;
+}
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+html{
+  background-color: black;
+}
+#nasatext{
+  display: inline;
+}
+.bottomlink{
+  text-decoration: none;
+  color: inherit;
+}
+.spanicon{
+  display: none;
+}
+a:hover .spanicon{
+  display: inline;
+}
+.bottomdiv{
+  background-color: #0d6efd;
+}
+.bottomdiv:hover{
+  background-color: rgb(41, 43, 44);
+}
