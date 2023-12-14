@@ -26,10 +26,10 @@ function updateTimer() {
 let barra = document.querySelector("nav");
 let header = document.querySelector("#header");
 const map = document.querySelector("#map");
-if (window.innerHeight - (barra.clientHeight + header.clientHeight) < (window.innerWidth - 250)) {
-	map.style.height = "calc(100vh - " + (barra.clientHeight + header.clientHeight) + "px)";
+if (window.innerHeight < 900) {
+	map.style.height = window.innerHeight;
 } else {
-	map.style.height = window.innerWidth;
+	map.style.height = "calc(100vh - " + (barra.clientHeight + header.clientHeight) + "px)";
 }
 let seconds = 0;
 let timer;
